@@ -107,6 +107,7 @@ main p {
 main img{
     margin: auto;
     display: block;
+    width: 100%;
 }
 
 h3 {
