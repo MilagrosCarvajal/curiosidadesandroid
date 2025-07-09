@@ -28,10 +28,10 @@
 
     <main>
         <article>
-            <h2>
+            <h2 class="reveal">
                 História do Mascote do Android
             </h2>
-            <p>
+            <p class="reveal">
                 Provavelmente você sabe que o sistema operacional <strong>Android</strong>, mantido pelo
                 <strong>Google</strong> é um dos mais utilizados
                 para
@@ -39,10 +39,10 @@
                 uma
                 história muito curiosa? Pois acompanhe esse artigo para aprender muita coisa sobre esse robozinho.
             </p>
-            <h3>
+            <h3 class="reveal">
                 A primeira versão
             </h3>
-            <p>
+            <p class="reveal">
                 A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado <a
                     href="https://meiobit.com/arquivo/83259/dan-morrill-produz-apresentacao-de-imagens-simbolizando-o-aumento-do-controle-sobre-o-android/"
                     target="_blank" class="links">Dan Morrill🔗</a>. Ele
@@ -52,33 +52,33 @@
                 da
                 empresa para a criação de um mascote.
             </p>
-            <div>
+            <div class="reveal">
                 <picture>
                     <source media="(max-width:900px)" srcset="pacote-projeto-d010/imagens/dan-droids-pq.png">
                     <img src="pacote-projeto-d010/imagens/dan-droids.png" alt="Imagem do icone antigo Android">
                 </picture>
             </div>
-            <p>Essa primeira versão bizarra até foi batizada em homenagem ao seu criador: seriam os
+            <p class="reveal">Essa primeira versão bizarra até foi batizada em homenagem ao seu criador: seriam os
                 <strong>Dandroids</strong>.
             </p>
-            <h3>
+            <h3 class="reveal">
                 Surge um novo mascote
             </h3>
-            <p>
+            <p class="reveal">
                 A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A
                 ilustradora <a href="https://www.irinablok.com/" target="_blank" class="links">Russa Irina Blok🔗</a>,
                 também funcionária do Google, ficou com a missão de representar o pequeno robô
                 de uma maneira mais agradável.
             </p>
 
-            <div>
+            <div class="reveal">
                 <picture>
                     <source  media="(max-width:900px )" srcset="pacote-projeto-d010/imagens/irina-blok-pq.jpg">
                     <img src="pacote-projeto-d010/imagens/irina-blok.jpg" alt="Irina">
                 </picture>
             </div>
 
-            <p>
+            <p class="reveal">
                 ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. O
                 desenho também deveria gerar identificação rápida com quem o olha. Surgiu então o
                 <strong>Bugdroid</strong>, o novo
@@ -86,9 +86,9 @@
                 do Android.
             </p>
 
-            <img src="pacote-projeto-d010/imagens/bugdroid.png" alt="Android">
+            <img src="pacote-projeto-d010/imagens/bugdroid.png" alt="Android" class="reveal">
 
-            <p>
+            <p class="reveal">
                 A principal inspiração para os traços do novo <strong>Bugdroid</strong> veio daqueles bonequinhos que
                 ilustram portas de
                 banheiro para indicar o gênero de cada porta. Conta a lenda que a artista estava criando em sua mesa no
@@ -96,13 +96,13 @@
                 simples, limpo,
                 objetivo.
             </p>
-            <div class="video-container">
+            <div class="video-container reveal">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M?si=SkjUy5dZbhferAH1"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <aside>
+            <aside class="reveal">
                 <h4>Quer aprender mais?</h4>
                 <p class="caixaaprender">Outro assunto curioso em relação ao <strong>Android</strong> é que cada versão
                     sempre foi nomeada em
@@ -136,7 +136,7 @@
                     uma
                     trouxe para o sistema Android.</p>
             </aside>
-            <p>Então é isso! Espero que você tenha gostado do nosso artigo com essa curiosidade sobre o sistema Android
+            <p class="reveal">Então é isso! Espero que você tenha gostado do nosso artigo com essa curiosidade sobre o sistema Android
                 e
                 seu simpático mascote.</p>
         </article>
@@ -146,6 +146,23 @@
         <p>
             Site criado por Milagros Carvajal para o <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo">CursoemVideo</a>.</p>
     </footer>
+
+    <script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach(function (el) {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
 
 </body>
 
